@@ -1,0 +1,93 @@
+# OS specific files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.sublime-*
+
+# Gradle
+.gradle/
+build/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# Kotlin
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+out/
+
+# Build artifacts
+bin/
+target/
+dist/
+
+# Local environment
+.env
+.env.local
+*.local
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+tmp/
+temp/
+
+# Logs
+logs/
+*.log
+
+# Package files
+*.dmg
+*.iso
+*.tar
+*.gz
+*.bz2
+*.7z
+
+# Node (if any future JS/TS projects)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if any future Python projects)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# Testing
+coverage/
+.coverage
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Documentation build
+docs/_build/
+site/
+
+# Backup files
+*.bak
+*.backup
+*_backup
+*.old
