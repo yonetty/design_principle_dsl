@@ -117,7 +117,9 @@ style: |
   img {
     display: block;
     margin: 20px auto;
-    max-width: 80%;
+    max-width: 70%;
+    max-height: 400px;
+    object-fit: contain;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
   }
@@ -304,6 +306,92 @@ style: |
     white-space: pre;
     overflow-x: auto;
   }
+  
+  .image-caption {
+    font-size: 0.7em;
+    color: #718096;
+    margin-top: 5px;
+    margin-bottom: 0;
+    line-height: 1.3;
+  }
+  
+  .image-container {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .book-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .book-item {
+    text-align: center;
+  }
+  
+  .book-image {
+    max-width: 100%;
+    max-height: 300px;
+  }
+  
+  .book-caption {
+    font-size: 0.8em;
+    color: #4a5568;
+    margin-top: 10px;
+  }
+  
+  .large-image {
+    max-width: 91%;
+    max-height: 520px;
+  }
+  
+  .medium-image {
+    max-width: 60%;
+    max-height: 280px;
+  }
+  
+  .half-image {
+    max-width: 50%;
+    max-height: 280px;
+  }
+  
+  .positioned-image {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+  }
+  
+  .positioned-image-small {
+    max-width: 45%;
+    max-height: 300px;
+  }
+  
+  .positioned-image-medium {
+    max-width: 48%;
+    max-height: 300px;
+  }
+  
+  .positioned-image-large {
+    max-width: 54%;
+    max-height: 360px;
+  }
+  
+  .final-message {
+    font-size: 6.0em;
+    color: #60a5fa;
+    font-weight: 700;
+  }
+  
+  .ruby-text {
+    position: relative;
+  }
+  
+  .reference-image {
+    max-width: 70%;
+    max-height: 360px;
+  }
 ---
 <!-- _backgroundColor: #1a202c -->
 <!-- _color: #e2e8f0 -->
@@ -359,7 +447,7 @@ p {
 }
 </style>
 
-# 誰のための<span style="position: relative;">設計<span class="ruby">design</span></span>？
+# 誰のための<span class="ruby-text">設計<span class="ruby">design</span></span>？
 
 <div class="bottom-info">
 <p>July 25, 2025</p>
@@ -371,25 +459,28 @@ p {
 
 # 自己紹介
 
-- **米久保 剛**
-- 設計大好き人間
+- **米久保 剛** (@tyonekubo)
+- 設計大好き
 
-<div class="placeholder">
-  [著書の書影プレースホルダー]<br>
-  『アーキテクトの教科書』<br>
-  『Software Design 2025年8月号』
+<div class="book-gallery">
+  <div class="book-item">
+    <img src="images/image_book1.jpg" class="book-image">
+    <p class="book-caption">発売一周年！</p>
+  </div>
+  <div class="book-item">
+    <img src="images/image_book2.jpg" class="book-image">
+    <p class="book-caption">リファクタリング特集に寄稿</p>
+  </div>
 </div>
 
 ---
 
 # 元ネタ
 
-## D.A.ノーマン博士の著書
+## 『誰のためのデザイン？ 認知科学者のデザイン言論』
+- D.A.ノーマン博士の著書
 
-<div class="placeholder">
-  [書影プレースホルダー]<br>
-  『誰のためのデザイン？』
-</div>
+<img src="images/image_book3.jpg" class="large-image">
 
 ---
 
@@ -400,39 +491,35 @@ p {
 - 人間のニーズ、能力、行動に合わせてデザインする
 - ユーザーの視点から道具を設計する
 
-<div class="placeholder">
-  [HCDの概念図プレースホルダー]
-</div>
-
 ---
 
 # 7つのデザイン原理
 
-1. **発見可能性**
-2. **アフォーダンス**
-3. **シグニファイア**
-4. **制約**
-5. **対応づけ**
-6. **フィードバック**
-7. **概念モデル**
+1. **概念モデル**
+2. **発見可能性**
+3. **アフォーダンス**
+4. **シグニファイア**
+5. **制約**
+6. **対応づけ**
+7. **フィードバック**
 
 ---
 
 # 概念モデル
 
-- 道具のメカニズム、基本動作原理に対するユーザーの心の中にあるモデル（**メンタルモデル**）
-
+- 道具のメカニズムや本動作原理に対する、ユーザーの心の中にあるモデル（**メンタルモデル**）
 - ユーザーが良い概念モデルを形成できるように、道具の設計を行う
 
-<div class="placeholder">
-  [概念モデルの図解プレースホルダー]
+<div class="image-container">
+  <img src="images/image_conceptual_model.jpg" class="medium-image">
+  <p class="image-caption">出典『誰のためのデザイン?』図1・11</p>
 </div>
 
 ---
 
 # 発見可能性
 
-## 道具の使い方がすぐに理解できること
+## 道具の使い方を見出し、理解することが容易であること
 
 - **統合的な原理**: 他の5つの原理が協調して実現
 - 道具を見ただけで「何ができるか」「どう使うか」が分かる
@@ -450,29 +537,25 @@ p {
 
 ## 環境が提供する行為の可能性
 
-**定義**: モノと主体（人、動物、機械）との関係性の中で生まれる、行為の可能性
+**定義**: モノと主体（人、動物、ロボット）との関係性の中で生まれる、行為の可能性
 
 **例: イスは...**
 - 座ることを可能にする（afford sitting）
 - 支えを提供する（afford support）
 - 持ち上げることを可能にする（afford lifting）
 
-<div class="placeholder">
-  [イスの写真プレースホルダー]
-</div>
+<img src="images/image_affordance.png" class="positioned-image positioned-image-medium">
 
 ---
 
 # シグニファイア
 
 ## アフォーダンスの存在を示す手がかり
-（マークや音など知覚可能なもの）
+- マークや音など知覚可能なもの
 
-**例: ドアの取っ手やパネル**
+**例: ティーバッグのタグ**
 
-<div class="placeholder">
-  [ドアの写真プレースホルダー]
-</div>
+<img src="images/image_signifier.jpg" class="half-image" style="max-height: 300px;">
 
 ---
 
@@ -480,12 +563,11 @@ p {
 
 ## 物理的、論理的、意味的、文化的な制約によって、取りうる行動を制限する
 
-- **ポカよけ**
 - エラーを防ぐデザイン
+- ポカよけ
+**例: 乾電池ホルダーのバネ（マイナス端子）**
 
-<div class="placeholder">
-  [制約の例プレースホルダー]
-</div>
+<img src="images/image_constraint.jpg" class="positioned-image positioned-image-small">
 
 ---
 
@@ -493,32 +575,28 @@ p {
 
 ## 要素同士の関係が明確であること
 
-**例: 部屋の電灯と、スイッチの位置関係**
+**例: ファミコンのコントローラー（十字キー）**
 
-<div class="placeholder">
-  [部屋の写真プレースホルダー]
-</div>
+<img src="images/image_mapping.jpg" class="half-image">
 
 ---
 
 # フィードバック
 
-## 要求に対してシステムが働いていること/働いていないことを知らせる
+## ユーザーの意図に対して、システムが働いていること/働いていないことを知らせる
 
 - 行為の結果を伝える
 - ユーザーに安心感を与える
 
-<div class="placeholder">
-  [フィードバックの例プレースホルダー]
-</div>
+<img src="images/image_feedback.png" class="positioned-image positioned-image-large">
 
 ---
 
-# 道具への原理の適用
+# デザイン原理の適用
 
 ## 物理的な道具から、デジタルな道具へ
 
-- ノーマン博士の原理は**あらゆる道具**に適用可能
+- ノーマン博士のデザイン原理は**あらゆる道具**に適用可能
 - ソフトウェアという道具の利用者にはプログラマも含まれる
 - 使う人（プログラマ）の認知や行動を考慮した設計が重要
 
@@ -530,7 +608,7 @@ p {
 - IDE
 - ライブラリ
 - ターミナル、コマンド
-- AI
+- 生成AI
 - **ソフトウェアそのもの**: 自分が書いたコンポーネントは、自分や他のプログラマが使う道具
 
 ---
@@ -539,9 +617,7 @@ p {
 
 ## ノーマンの7つのデザイン原理を適用可能
 
-<div class="placeholder">
-  [プログラミング環境の写真プレースホルダー]
-</div>
+![](images/image_programming.jpg)
 
 ---
 
@@ -608,11 +684,8 @@ fun generateSalesReportLegacy(salesData: List<SalesRecord>): String {
 ## 特定の条件でデータをグループ化し、集計する処理
 
 - 例: 月ごと、部門ごとの売上集計
-- 古典的なアルゴリズムのパターン
-
-<div class="placeholder">
-  [コントロールブレイクの図解プレースホルダー]
-</div>
+- 古典的な**アルゴリズムのパターン**
+- キー項目の変化をトリガーに集計処理を行う
 
 ---
 
@@ -641,7 +714,7 @@ fun generateSalesReportLegacy(salesData: List<SalesRecord>): String {
 
 ---
 
-# コードサンプル: <span class="subtitle">概念モデルとの対応づけ</span>
+# コードサンプル: <span class="subtitle">DSLによる概念モデルとの対応づけ</span>
 
 ```kotlin
 salesData.applyControlBreak {
@@ -705,7 +778,7 @@ fun generateReport(salesData: List<SalesRecord>) {
 
 ---
 
-# デザイン原理の適用：<span class="subtitle">制約</span>
+# デザイン原理の適用：<span class="subtitle">制約によるポカよけ</span>
 
 ## 型システムによるガード
 
@@ -821,20 +894,9 @@ fun `should process simple control break correctly`() {
 - ただし、DSLの実装難易度や工数が課題
 
 ---
-
-# AIとの伴走
-
-## t-wadaさん『AI時代のソフトウェア開発を考える』
-
-<div class="placeholder">
-  [t-wadaさんのスライド画像プレースホルダー]
-</div>
-
----
-
 # AIを活用した開発者体験向上
 
-## 生成AIにより、これまでだと費用対効果でできなかったDSLの実装が可能に
+## 生成AIにより、これまでだと費用対効果で難しかったDSLの実装が可能に
 
 <div class="highlight-box success">
 
@@ -842,8 +904,17 @@ fun `should process simple control break correctly`() {
 
 **開発者体験の大幅な向上** - 直感的で使いやすいAPIの提供
 
-**これまで諦めていた理想的な設計が実現可能に** - AIが実装の複雑さを吸収
+</div>
 
+---
+
+# AIとの伴走
+
+## コアドメイン（中核）：AIを使いこなすクリエイティビティが重要
+
+<div class="image-container">
+  <img src="images/image_t-wada.png" class="reference-image">
+  <p class="image-caption">出典 t-wada『AI時代のソフトウェア開発を考える』<br>https://speakerdeck.com/twada/agentic-software-engineering-findy-2025-07-edition</p>
 </div>
 
 ---
@@ -892,10 +963,16 @@ p {
   right: 0;
   text-align: center;
 }
+
+.final-message {
+  font-size: 2.0em;
+  color: #60a5fa;
+  font-weight: 700;
+}
 </style>
 
 # ご清聴ありがとうございました
 
 <div class="bottom-info">
-<p style="font-size: 2.0em; color: #60a5fa; font-weight: 700;">ENJOY DESIGNING!</p>
+<p class="final-message">ENJOY DESIGNING!</p>
 </div>
