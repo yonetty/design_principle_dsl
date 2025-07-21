@@ -980,7 +980,7 @@ fun `should process simple control break correctly`() {
 
 <div class="haiku-container">
   <div class="haiku-text">
-    誰のため？ 自分自身で いいんです<span class="haiku-emoji">😎</span>
+    誰のため？ 自分のためで いいんです<span class="haiku-emoji">😎</span>
   </div>
 </div>
 
