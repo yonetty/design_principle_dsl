@@ -413,6 +413,18 @@ style: |
     display: inline-block;
     margin-left: 0.2em;
   }
+
+  .repo-link {
+    color: #4299e1;
+    text-decoration: none;
+    font-size: 0.75em;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .repo-link:hover {
+    text-decoration: underline;
+  }
 ---
 <!-- _backgroundColor: #1a202c -->
 <!-- _color: #e2e8f0 -->
@@ -697,6 +709,12 @@ fun generateSalesReportLegacy(salesData: List<SalesRecord>): String {
 </pre>
 
 </div>
+
+<p style="margin-top: 20px; text-align: center;">
+  <a href="https://github.com/yonetty/design_principle_dsl" class="repo-link">
+    📦 https://github.com/yonetty/design_principle_dsl
+  </a>
+</p>
 
 ---
 
