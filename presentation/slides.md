@@ -3,6 +3,7 @@ marp: true
 theme: custom
 paginate: true
 backgroundColor: white
+title: 誰のための設計？
 style: |
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
   
