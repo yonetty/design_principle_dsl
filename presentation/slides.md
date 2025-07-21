@@ -954,9 +954,12 @@ fun `should process simple control break correctly`() {
 
 ## コアドメイン（中核）：AIを使いこなすクリエイティビティが重要
 
-<div class="image-container">
-  <img src="images/image_t-wada.png" class="reference-image">
-  <p class="image-caption">出典 t-wada『AI時代のソフトウェア開発を考える』<br>https://speakerdeck.com/twada/agentic-software-engineering-findy-2025-07-edition</p>
+<div class="image-container" style="margin-bottom: 0;">
+  <img src="images/image_t-wada.png" style="max-height: 300px;">
+  <p class="image-caption" style="margin-bottom: 5px;">出典: t-wada『AI時代のソフトウェア開発を考える』</p>
+  <a href="https://speakerdeck.com/twada/agentic-software-engineering-findy-2025-07-edition" target="_blank" style="color: #4299e1; text-decoration: none; font-size: 0.75em; display: block;">
+    https://speakerdeck.com/twada/agentic-software-engineering-findy-2025-07-edition
+  </a>
 </div>
 
 ---
