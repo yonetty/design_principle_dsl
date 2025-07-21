@@ -392,6 +392,27 @@ style: |
     max-width: 70%;
     max-height: 360px;
   }
+
+  .haiku-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+
+  .haiku-text {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #2b6cb0;
+    line-height: 1.8;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .haiku-emoji {
+    display: inline-block;
+    margin-left: 0.2em;
+  }
 ---
 <!-- _backgroundColor: #1a202c -->
 <!-- _color: #e2e8f0 -->
@@ -709,8 +730,10 @@ fun generateSalesReportLegacy(salesData: List<SalesRecord>): String {
 
 ## 「コントロールブレイク」の基本メカニズム
 
-- キー項目のブレイクをきっかけに集計処理を行う
-- 概念モデルとコードが対応づく形で記述できるようにする
+- キー項目のブレイクをきっかけに集計などの処理を行う
+
+ <b>→概念モデルとコードが対応づく形で記述できるようにしたい</b>
+ <b>→どうやって？</b>
 
 ---
 
@@ -926,6 +949,16 @@ fun `should process simple control break correctly`() {
 - **D.A.ノーマンの7つのデザイン原理**はソフトウェア設計にも適用可能
 
 - 「AIに全部作らせる」のではなく、**AIを活用して設計の質を向上させる**
+
+---
+
+# 締めのアレ
+
+<div class="haiku-container">
+  <div class="haiku-text">
+    誰のため？ 自分自身で いいんです<span class="haiku-emoji">😎</span>
+  </div>
+</div>
 
 ---
 
