@@ -29,6 +29,21 @@ npx @marp-team/marp-cli slides.md -o slides.html --html
 npx @marp-team/marp-cli slides.md -o slides.html --html --watch
 ```
 
+## PDF出力
+
+```bash
+# PDF形式で出力（ローカル画像を含む）
+npx @marp-team/marp-cli slides.md -o slides.pdf --pdf --allow-local-files
+
+# Chrome/Chromiumを指定してPDF出力（より高品質）
+npx @marp-team/marp-cli slides.md -o slides.pdf --pdf --pdf-outlines --allow-local-files
+
+# アウトラインとスピーカーノート付きでPDF出力
+npx @marp-team/marp-cli slides.md -o slides.pdf --pdf --pdf-outlines --pdf-notes --allow-local-files
+```
+
+**注意**: `--allow-local-files` オプションはローカルファイル（画像など）へのアクセスを許可します。信頼できるコンテンツでのみ使用してください。
+
 ## 発表内容
 
 1. **HCD（人間中心設計）の紹介**

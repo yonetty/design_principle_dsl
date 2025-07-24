@@ -502,6 +502,10 @@ p {
     <p class="book-caption">発売一周年！</p>
   </div>
   <div class="book-item">
+    <img src="images/image_book4.jpg" class="book-image">
+    <p class="book-caption">韓国語版も！</p>
+  </div>
+  <div class="book-item">
     <img src="images/image_book2.jpg" class="book-image">
     <p class="book-caption">リファクタリング特集に寄稿</p>
   </div>
